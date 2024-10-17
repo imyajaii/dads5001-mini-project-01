@@ -34,9 +34,12 @@
     <li>
       <a href="#death-cause-analysis" target="_blank">Death Cause Analysis</a>
       <ul>
-        <li><a href="#world-death-1990---2019">World Death 1990 - 2019</a></li>
-        <li><a href="#risk-factor">Risk Factor</a></li>
-        <li><a href="#transform2">Transform2</a></li>
+        <li><a href="#การวิเคราะห์การเสียชีวิตจากโรคต่างๆ-ตั้งแต่ปี-1990---2019">การวิเคราะห์การเสียชีวิตจากโรคต่างๆ ตั้งแต่ปี 1990 - 2019</a></li>
+        <li><a href="#การเสียชีวิตทั่วโลกตั้งแต่ปี-1990---2019">การเสียชีวิตทั่วโลกตั้งแต่ปี 1990 - 2019</a></li>
+        <li><a href="#การจัดกลุ่มปัจจัยเสี่ยงในการวิเคราะห์สาเหตุการเสียชีวิต">การจัดกลุ่มปัจจัยเสี่ยงในการวิเคราะห์สาเหตุการเสียชีวิต</a></li>
+        <li><a href="#แนวโน้มการเสียชีวิตของแต่ละปัจจัยเสี่ยงในแต่ละทวีปตั้งแต่ปี-1990---2019">แนวโน้มการเสียชีวิตของแต่ละปัจจัยเสี่ยงในแต่ละทวีปตั้งแต่ปี 1990 - 2019</a></li>
+        <li><a href="#การเสียชีวิตจากโรคเรื้อรังในภูมิภาคเอเชียตะวันออกเฉียงเหนือ">การเสียชีวิตจากโรคเรื้อรังในภูมิภาคเอเชียตะวันออกเฉียงเหนือ</a></li>
+        <li><a href="#death-cause-analysys-sea">อัตราการเปลี่ยนแปลงจากอัตราส่วนผู้เสียชีวิตต่อจำนวนประชากรในภูมิภาคเอเชียตะวันออกเฉียงเหนือ</a></li>
       </ul>
     </li>
     <li>
@@ -3147,32 +3150,18 @@ Example data
 
 ## Death Cause Analysis
 
-การเสียชีวิตจากโรคต่างๆ ทั่วโลกในช่วงปี 1990 - 2019 มีแนวโน้มเปลี่ยนแปลงไปตามปัจจัยหลายประการ เช่น ความก้าวหน้าทางการแพทย์ วิถีชีวิตของประชากร การพัฒนาสังคม และเศรษฐกิจ รวมถึงการเพิ่มขึ้นของจำนวนประชากรสูงอายุ ข้อมูลจากการวิเคราะห์นี้จะแสดงให้เห็นถึงสาเหตุหลักของการเสียชีวิตในแต่ละภูมิภาคทั่วโลก รวมถึงแนวโน้มของการเสียชีวิตจากโรคเรื้อรังที่เกี่ยวข้องกับปัจจัยเสี่ยงต่างๆ เช่น โรคหัวใจ มะเร็ง เบาหวาน และโรคทางเดินหายใจเรื้อรัง
+### การวิเคราะห์การเสียชีวิตจากโรคต่างๆ ตั้งแต่ปี 1990 - 2019
 
-
-```python
-columns_to_sum = ['Meningitis', 'Alzheimers_Disease_and_Other_Dementias', 'Parkinsons_Disease',
-                  'Nutritional_Deficiencies', 'Malaria', 'Drowning', 'Interpersonal_Violence',
-                  'Maternal_Disorders', 'HIV', 'Drug_Use_Disorders', 'Tuberculosis', 'Cardiovascular_Diseases',
-                  'Lower_Respiratory_Infections', 'Neonatal_Disorders', 'Alcohol_Use_Disorders', 'Self_harm',
-                  'Exposure_to_Forces_of_Nature', 'Diarrheal_Diseases', 'Environmental_Heat_and_Cold_Exposure',
-                  'Neoplasms', 'Conflict_and_Terrorism', 'Diabetes_Mellitus', 'Chronic_Kidney_Disease',
-                  'Poisonings', 'Protein_Energy_Malnutrition', 'Road_Injuries', 'Chronic_Respiratory_Diseases',
-                  'Cirrhosis_and_Other_Chronic_Liver_Diseases', 'Digestive_Diseases', 'Fire_Heat_and_Hot_Substances', 'Acute_Hepatitis']
-
-column_sums = df_Main_data[columns_to_sum].sum().sort_values(ascending=False)
-
-```
-
-```python
-first_plot = column_sums.sort_values(ascending=False).reset_index().rename(columns={'index':'Cause', 0:'Total'}).head(10)
-```
+การเสียชีวิตจากโรคต่างๆ ทั่วโลกในช่วงปี 1990 - 2019 มีแนวโน้มเปลี่ยนแปลงไปตามปัจจัยหลายประการ เช่น ความก้าวหน้าทางการแพทย์ วิถีชีวิตของประชากร การพัฒนาสังคม และเศรษฐกิจ รวมถึงการเพิ่มขึ้นของจำนวนประชากรสูงอายุ ข้อมูลจากการวิเคราะห์นี้จะแสดงให้เห็นถึงสาเหตุหลักของการเสียชีวิตในแต่ละภูมิภาคทั่วโลก รวมถึงแนวโน้มของการเสียชีวิตจากโรคเรื้อรังที่เกี่ยวข้องกับปัจจัยเสี่ยงต่างๆ เช่น โรคหัวใจ มะเร็ง เบาหวาน และโรคทางเดินหายใจเรื้อรังของคนภูมิภาคเอเชียตะวันออกเฉียงเหนือ
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### World Death 1990 - 2019
+### การเสียชีวิตทั่วโลกตั้งแต่ปี 1990 - 2019
 
-จากข้อมูลที่นำมาวิเคราะห์แสดงให้เห็นว่าการเสียชีวิตจากโรคต่างๆ มีการเปลี่ยนแปลงอย่างชัดเจนในช่วง 30 ปีที่ผ่านมานับตั้งแต่ปี 1990 - 2019 กราฟด้านล่างแสดงจำนวนผู้เสียชีวิตจากโรคสำคัญทั่วโลก โดยโรคที่มีปริมาณเสียชีวิตสูงสุดในช่วงเวลาดังกล่าวประกอบไปด้วย:
+  จากข้อมูลที่นำมาวิเคราะห์แสดงให้เห็นว่าการเสียชีวิตจากโรคต่างๆ มีการเปลี่ยนแปลงอย่างชัดเจนในช่วง 30 ปีที่ผ่านมานับตั้งแต่ปี 1990 - 2019 กราฟด้านล่างแสดงจำนวนผู้เสียชีวิตจากโรคสำคัญทั่วโลก โดยโรคที่มีปริมาณเสียชีวิตสูงสุดในช่วงเวลาดังกล่าวประกอบไปด้วย:
+
+
+![png](Markdown/Death_Cause_Analysis_files/Top_10_Leading_Causes_of_Death_Worldwide_(1990-2019).png)
 
 1.   โรคหัวใจและหลอดเลือด(Cardiovascular_Diseases)
 2.   เนื้องอก (Neoplasms)
@@ -3185,203 +3174,19 @@ first_plot = column_sums.sort_values(ascending=False).reset_index().rename(colum
 9.   ตับแข็งและโรคตับเรื้อรังอื่นๆ (Cirrhosis_and_Other_Chronic_Liver_Diseases)
 10.  เอชไอวี (HIV)
 
-
-```python
-first_plot
-```
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Cause</th>
-      <th>Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Cardiovascular_Diseases</td>
-      <td>447741982.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Neoplasms</td>
-      <td>229758538.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Chronic_Respiratory_Diseases</td>
-      <td>104605334.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Lower_Respiratory_Infections</td>
-      <td>83770038.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Neonatal_Disorders</td>
-      <td>76860729.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Diarrheal_Diseases</td>
-      <td>66235508.0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Digestive_Diseases</td>
-      <td>65638635.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Tuberculosis</td>
-      <td>45850603.0</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Cirrhosis_and_Other_Chronic_Liver_Diseases</td>
-      <td>37479321.0</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>HIV</td>
-      <td>36364419.0</td>
-    </tr>
-  </tbody>
-</table>
-
-
-```python
-plt.figure(figsize=(10, 6))
-plt.barh(first_plot['Cause'], first_plot['Total'])
-plt.xlabel('Total Number of Deaths')
-plt.ylabel('Cause of Death')
-plt.title('Top 10 Leading Causes of Death Worldwide (1990-2019)')
-plt.show()
-```
-    
-![png](Markdown/Death_Cause_Analysis_files/Death_Cause_Analysis_80_0.png)
-    
-
-```python
-column_sums = df_Main_data[columns_to_sum].sum().sort_values(ascending=False)
-
-# Convert the Series to DataFrame before merging.
-column_sums = column_sums.to_frame(name='Total')
-column_sums = column_sums.reset_index().rename(columns={'index':'Cause'})
-
-# Now you can merge
-column_sums = column_sums.merge(df_Main_data.groupby(['Continent'])[columns_to_sum].sum().transpose(), left_on='Cause', right_index=True)
-```
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Risk Factor
+### การจัดกลุ่มปัจจัยเสี่ยงในการวิเคราะห์สาเหตุการเสียชีวิต
 
-Manualy grouping
+เนื่องจากข้อมูลเกี่ยวกับสาเหตุการเสียชีวิตมีจำนวนมาก เราจึงได้ทำการจัดกลุ่มปัจจัยเสี่ยงออกเป็น 4 กลุ่มหลัก เพื่อนำไปวิเคราะห์ต่อ ดังนี้:
 
-```python
+1. โรคเรื้อรัง(Chronic Diseases)
+2. โรคติดต่อ (Infectious Diseases)
+3. ปัจจัยภายนอกที่ทำให้เสียชีวิต (Environmental and External Causes)
+4. ปัจจัยเสี่ยงจากไลฟ์สไตล์การใช้ชีวิต (Lifestyle Related Factors)
+   
+การจัดกลุ่มปัจจัยเหล่านี้จะช่วยให้เราสามารถพิจารณาสาเหตุที่ทำให้ผู้คนเสียชีวิตได้มากที่สุด โดยเราจะนำมาจัดอันดับจากการเสียชีวิตที่เกิดจากแต่ละปัจจัย และจำแนกเป็นทวีปเพื่อให้เห็นภาพรวมของผลกระทบจากปัจจัยเสี่ยงต่างๆ ต่อปริมาณเสียชีวิตในแต่ละทวีป
 
-# List of diseases grouped by categories
-grouped_diseases = {
-    "Lifestyle-Related_Factors": [
-        "Nutritional_Deficiencies",
-        "Drug_Use_Disorders",
-        "Alcohol_Use_Disorders",
-        "Self_harm",
-        "Protein_Energy_Malnutrition"
-    ],
-    "Environmental_and_External Causes": [
-        "Drowning",
-        "Interpersonal_Violence",
-        "Exposure_to_Forces_of_Nature",
-        "Conflict_and_Terrorism",
-        "Road_Injuries",
-        "Environmental_Heat_and_Cold_Exposure",
-        "Poisonings",
-        "Fire_Heat_and_Hot_Substances"
-    ],
-    "Infectious_Diseases": [
-        "Meningitis",
-        "Malaria",
-        "HIV",
-        "Tuberculosis",
-        "Neonatal_Disorders",
-        "Diarrheal_Diseases",
-        "Acute_Hepatitis"
-    ],
-    "Chronic_Diseases": [
-        "Alzheimers_Disease_and_Other_Dementias",
-        "Parkinsons_Disease",
-        "Cardiovascular_Diseases",
-        "Lower_Respiratory_Infections",
-        "Neoplasms",
-        "Diabetes_Mellitus",
-        "Chronic_Kidney_Disease",
-        "Chronic_Respiratory_Diseases",
-        "Cirrhosis_and_Other_Chronic_Liver_Diseases",
-        "Digestive_Diseases"
-    ]
-}
-
-# Convert dictionary to pandas DataFrame
-df_grouped_diseases = pd.DataFrame([(category, disease) for category, diseases in grouped_diseases.items() for disease in diseases], columns=["Risk_Factor", "Cause"])
-
-```
-
-
-```python
-
-#Prefer only death count
-df_Main_data_new = df_Main_data.drop(columns=['Total_Dead','Population'])
-df_Main_data_new = df_Main_data_new.melt(id_vars=['Country', 'Code', 'Continent', 'Sub_region', 'Year'],
-                                         var_name='Cause',
-                                         value_name='Death_count')
-df_Main_data_new = df_Main_data_new.join(df_grouped_diseases.set_index('Cause'), on='Cause')[['Country', 'Code', 'Continent', 'Sub_region', 'Year', 'Risk_Factor', 'Cause', 'Death_count']]
-```
-
-
-```python
-top_10 = df_Main_data_new.groupby(['Continent','Risk_Factor']).sum().sort_values(by='Death_count', ascending=False)[['Death_count']]
-top_10['Death_count(M)'] =top_10['Death_count']/1000000
-top_10.reset_index(inplace=True)
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Transform2
-
-
-```python
-
-#Adjust unit
-column_sums['Africa(%)'] = column_sums['Africa'] / 1000000
-column_sums['Asia(%)'] = column_sums['Asia'] / 1000000
-column_sums['Europe(%)'] = column_sums['Europe'] / 1000000
-column_sums['Oceania(%)'] = column_sums['Oceania'] / 1000000
-column_sums['Americas(%)'] = column_sums['Americas'] / 1000000
-column_sums['Total death(M)'] = column_sums['Total'] / 1000000
-```
-
-```python
-column_sums=column_sums.merge(df_grouped_diseases.set_index('Cause'), left_on='Cause', right_index=True)
-```
-
-```python
-result_percen = column_sums.groupby(['Risk_Factor']).sum().sort_values(by='Total death(M)', ascending=False)[['Total death(M)','Africa(%)', 'Americas(%)', 'Asia(%)', 'Europe(%)', 'Oceania(%)']]
-for continent in ['Africa(%)', 'Americas(%)', 'Asia(%)', 'Europe(%)', 'Oceania(%)']:
-  result_percen[continent] = (result_percen[continent] / result_percen['Total death(M)']) * 100
-```
-
-
-##### **This table show Risk Factors by continent (%) from 1990 to 2019**
-
-
-```python
-result_percen.round(2)
-```
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3443,537 +3248,312 @@ result_percen.round(2)
   </tbody>
 </table>
 
+![png](Markdown/Death_Cause_Analysis_files/Continent.png)
 
-```python
-
-# Create the heatmap
-import seaborn as sns
-import matplotlib.pyplot as plt
-plt.figure(figsize=(10, 6))
-
-# unstack() is used to pivot the 'Risk_Factor' level of the index into columns.
-# This operation transforms the Series into a DataFrame suitable for sns.heatmap.
-
-sns.heatmap(df_Main_data_new.groupby(['Risk_Factor','Continent'])['Death_count'].sum().unstack(), annot=True, fmt=".0f", cmap='Reds')
-plt.title('Death Counts by Continent and Risk Factor',fontweight='bold')
-plt.xlabel('Continent')
-plt.ylabel('Risk Factor')
-plt.show()
-```
-
-![png](Markdown/Death_Cause_Analysis_files/Death_Cause_Analysis_96_0.png)
-    
-
-กราฟนี้แสดงให้เห็นถึงปริมาณการเสียชีวิตจาก4ปัจจัยดสี่ยงหลักในแต่ละทวีป โดยจากการวิเคราะห์ข้อมูล พบว่าผู้คนในทุกทวีปมีอัตราการเสียชีวิตจากโรคเรื้อรังสูงที่สุด โดยทวีปเอเชียมีอัตราการเสียชีวิตที่สูงที่สุดเมื่อเปรียบเทียบกับทวีปอื่นๆ นอกจากนี้ ทวีปเอเชียยังเป็นอันดับหนึ่งในด้านปัจจัยเสี่ยงอื่นๆ เช่น โรคติดเชื้อ เสียชีวิตจากสิ่งแวดล้อมหรือปัจจัยภายนอก และเสียชีวิตสาเหตุจากไลฟ์สไตล์การใช้ชีวิต
-ซึ่งสิ่งเหล่านี้เป็นสาเหตุหลักที่ส่งผลให้เกิดโรคต่างๆและนำไปสู่อัตราการเสียชีวิตที่สูงขึ้น
+วิธีการนี้จะทำให้การวิเคราะห์ชัดเจนขึ้นว่า ปัจจัยเสี่ยงใดที่ทำให้เกิดการเสียชีวิตมากที่สุด และแต่ละทวีปได้รับผลกระทบจากปัจจัยเหล่านี้ในรูปแบบใดบ้าง ซึ่งจะเห็นว่าทวีปเอเชียมีอัตราการเสียชีวิตมากที่สุดในทุกปัจจัย
 
 การวิเคราะห์นี้ชี้ให้เห็นถึงความจำเป็นในการให้ความสำคัญกับการดูแลสุขภาพและการป้องกันโรคในทวีปเอเชีย รวมถึงการสร้างความตระหนักรู้เกี่ยวกับปัจจัยเสี่ยงที่สามารถควบคุมได้ เพื่อช่วยลดอัตราการเสียชีวิตในอนาคต
 
-#### **Trends of Death count overyears**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```python
-fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(16, 12))
+### แนวโน้มการเสียชีวิตของแต่ละปัจจัยเสี่ยงในแต่ละทวีปตั้งแต่ปี 1990 - 2019
 
-# Time series
-# Group data by year, continent, and risk factor, then calculate the sum of death counts
-df_grouped = df_Main_data_new.groupby(['Year', 'Continent', 'Risk_Factor'])['Death_count'].sum().reset_index()
-# Loop through each risk factor and create a subplot for its time series
-for i, risk_factor in enumerate(df_grouped['Risk_Factor'].unique()):
-    # Fix: Adjust indexing to stay within the 2x2 grid
-    row = i // 2
-    col = i % 2
-    ax = axes[row, col]  # Assign axes based on index within a 2x2 grid
-    df_subset = df_grouped[df_grouped['Risk_Factor'] == risk_factor]
-    for continent in df_subset['Continent'].unique():
-        df_continent = df_subset[df_subset['Continent'] == continent]
-        ax.plot(df_continent['Year'], df_continent['Death_count'], label=continent)
-    ax.set_title(f'Death Count Trend for {risk_factor}')
-    ax.set_xlabel('Year')
-    ax.set_ylabel('Death Count')
-    ax.legend()
-
-plt.tight_layout()
-plt.show()
-```
-    
-![png](Markdown/Death_Cause_Analysis_files/Death_Cause_Analysis_99_0.png)
-    
-Combine cause of death column into risk factor
+จากการวิเคราะห์ข้อมูลการเสียชีวิตของประชากรทั่วโลกตั้งแต่ปี 1990 - 2019 พบว่าแนวโน้มการเสียชีวิตมีการเปลี่ยนแปลงไปตามปัจจัยเสี่ยงหลัก 4 ประการ ได้แก่ โรคเรื้อรัง โรคติดต่อ ปัจจัยภายนอก และพฤติกรรมการใช้ชีวิต
 
 
-```python
-
-# prompt: ใช้ Risk_Factor จากตาราง df_grouped_diseases เพื่อรวมColumnที่อยู่ในตาราง df_Main_data ด้วยดูจากชื่อColumnของdf_Main_dataที่ตรงกับ ค่าในColumn Cause แล้วรวมกันเป็นตารางใหม่
-
-# Assuming df_Main_data and df_grouped_diseases are defined as in your provided code.
-
-new_df = pd.DataFrame()  # Create an empty DataFrame to store the merged data
-new_df['Code'] = df_Main_data['Code']
-new_df['Year'] = df_Main_data['Year']
-new_df['Continent'] = df_Main_data['Continent']
-new_df['Sub_region'] = df_Main_data['Sub_region']
-
-for risk_factor in df_grouped_diseases['Risk_Factor'].unique():
-  causes_for_risk = df_grouped_diseases[df_grouped_diseases['Risk_Factor'] == risk_factor]['Cause'].tolist()
-
-  #print(causes_for_risk)
-  risk_factor_data = df_Main_data[causes_for_risk].sum(axis=1)  # Sum the columns corresponding to causes for this risk factor
-  new_df[risk_factor] = risk_factor_data  # Add the summed column to the new DataFrame
-
-new_df['Total_Dead'] = df_Main_data['Total_Dead']
-new_df['Population'] = df_Main_data['Population']
-
-```
-
-Transform into ratio
+![png](Markdown/Death_Cause_Analysis_files/Death_Count_Trend.png)
 
 
-```python
-ratio = new_df.groupby(['Year','Continent']).sum().reset_index()
-ratio.drop(columns=['Code','Sub_region'], inplace=True)
+- โรคเรื้อรัง: เช่น โรคหัวใจ มะเร็ง และโรคทางเดินหายใจเรื้อรัง มีแนวโน้มเพิ่มขึ้นอย่างต่อเนื่องในหลายทวีป
+- โรคติดต่อ: แนวโน้มของการเสียชีวิตจากโรคติดต่อมีการลดลงในบางภูมิภาคที่มีการพัฒนาทางการแพทย์และการเข้าถึงวัคซีนมากขึ้น
+- ปัจจัยภายนอก: การเสียชีวิตจากอุบัติเหตุและความรุนแรงทางสังคมมีการเปลี่ยนแปลงขึ้นลงตามสภาพเศรษฐกิจและความมั่นคงของแต่ละภูมิภาค
+- พฤติกรรมการใช้ชีวิต: ปัจจัยเสี่ยงจากการใช้ชีวิต เช่น การสูบบุหรี่ การดื่มแอลกอฮอล์ และการรับประทานอาหารที่ไม่ดีต่อสุขภาพ ยังคงเป็นปัจจัยสำคัญที่ทำให้เกิดการเสียชีวิตเพิ่มขึ้นในหลายภูมิภาค
 
-##Divide by population
-for column in grouped_diseases.keys():
-  ratio[column] = ratio[column] / ratio['Population']
-```
+การเปลี่ยนแปลงของแนวโน้มเหล่านี้สะท้อนถึงความก้าวหน้าทางการแพทย์ การเปลี่ยนแปลงด้านเศรษฐกิจ และวัฒนธรรมการใช้ชีวิตของผู้คนในแต่ละทวีป
+
+จากการนำข้อมูลผู้เสียชีวิตในแต่ละทวีปมาเทียบอัตราส่วนกับจำนวนประชากรพบว่าทวีปเอเชียไม่ใช่ทวีปที่มีอัตราการเสียชีวิตเทียบกับประชากรสูงสุด
+
+![png](Markdown/Death_Cause_Analysis_files/Ratio_of_Death_for.png)
+
+จากการวิเคราะห์ข้อมูลผู้เสียชีวิตในแต่ละทวีปเมื่อเทียบอัตราส่วนกับจำนวนประชากร พบว่าทวีปเอเชียไม่ได้เป็นทวีปที่มีอัตราการเสียชีวิตสูงสุดเมื่อเทียบกับประชากรทั้งหมด ขณะที่ในทวีปอื่น ๆ เช่น แอฟริกาและอเมริกาใต้ พบว่ามีอัตราการเสียชีวิตสูงจากปัจจัยเสี่ยงที่เกี่ยวข้องกับโรคติดต่อ
 
 
-```python
-import matplotlib.pyplot as plt
+ข้อมูลนี้แสดงถึงอัตราการเปลี่ยนแปลงของอัตราการเสียชีวิตต่อประชากรในแต่ละทวีป **โดยใช้หน่วยเป็นการคูณล้าน (x 1,000,000)** เพื่อให้อ่านเข้าใจง่ายขึ้น ซึ่งมีการคำนวณ Slope (แนวโน้ม) ของการเปลี่ยนแปลงในแต่ละปี ดังนี้:
 
-# Assuming 'ratio' DataFrame is defined as in your provided code
-# and contains columns like 'Year', 'Continent', 'Lifestyle-Related_Factors', etc.
+1. ปัจจัยเสี่ยงที่เกี่ยวข้องกับไลฟ์สไตล์ (Lifestyle-Related Factors):
+   
+- Africa: -20
+- Americas: -0.5
+- Asia: -10
+- Europe: -0.5
+- Oceania: -0.4
 
-fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(12, 8))
+2. ปัจจัยเสี่ยงจากสิ่งแวดล้อมและสาเหตุภายนอก (Environmental and External Causes):
+- Africa: -10
+- Americas: -4
+- Asia: -5
+- Europe: -6
+- Oceania: -3
 
-# Loop through each risk factor and create a subplot for its time series
-for i, risk_factor in enumerate(grouped_diseases.keys()):
-    row = i // 2
-    col = i % 2
-    ax = axes[row, col]
-    for continent in ratio['Continent'].unique():
-        df_continent = ratio[ratio['Continent'] == continent]
-        ax.plot(df_continent['Year'], df_continent[risk_factor], label=continent)
-    ax.set_title(f'Ratio of Death for {risk_factor}')
-    ax.set_xlabel('Year')
-    ax.set_ylabel('Ratio')
-    ax.legend()
+3. โรคติดเชื้อ (Infectious Diseases):
+- Africa: -90
+- Americas: -20
+- Asia: -40
+- Europe: -2
+- Oceania: +0.05
+4. โรคเรื้อรัง (Chronic Diseases):
 
-plt.tight_layout()
-plt.show()
-```
+- Africa: -40
+- Americas: +30 (แนวโน้มเพิ่มขึ้น)
+- Asia: +30 (แนวโน้มเพิ่มขึ้น)
+- Europe: +30 (แนวโน้มเพิ่มขึ้น)
+- Oceania: +1.5 (แนวโน้มเพิ่มขึ้นเล็กน้อย)
+
+จากข้อมูลเหล่านี้สามารถเห็นได้ว่าปัจจัยเสี่ยงที่เกี่ยวข้องกับไลฟ์สไตล์และโรคเรื้อรังในทวีปต่าง ๆ มีแนวโน้มการเปลี่ยนแปลงที่แตกต่างกัน ขณะที่บางทวีปมีแนวโน้มลดลง เช่น แอฟริกา แต่ในยุโรปและอเมริกากลับมีแนวโน้มเพิ่มขึ้น
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![png](Markdown/Death_Cause_Analysis_files/Death_Cause_Analysis_104_0.png)
-    
-##### **การเปลี่ยนแปลงปริมาณผูเสียชีวิตต่อประชากรในแต่ละทวีปตั้งแต่ปี1990 - 2019**
+### การเสียชีวิตจากโรคเรื้อรังในภูมิภาคเอเชียตะวันออกเฉียงเหนือ
 
-กราฟนี้แสดงอัตราส่วนของการเสียชีวิตต่อประชากร ซึ่งแสดงให้เห็นว่าเมื่อเปรียบเทียบกับประชากรแล้ว ทวีปเอเชียไม่ได้เป็นทวีปที่มีการเสียชีวิตสูงสุดในทุกปัจจัยเสี่ยง โดยพบว่าทวีปแอฟริกาและยุโรปมีอัตราการเสียชีวิตที่สูงกว่าในบางปัจจัยเสี่ยง อย่างไรก็ตาม การวิเคราะห์ในทวีปแอฟริกากลับพบว่ามีอัตราการเสียชีวิตลดลงอย่างมีนัยสำคัญ ซึ่งน่าสนใจมาก การลดลงนี้อาจเกิดจากความพยายามในการปรับปรุงระบบสุขภาพ การให้ความรู้เกี่ยวกับการป้องกันโรค และการเข้าถึงการรักษาพยาบาลที่ดีขึ้น
+ภูมิภาคเอเชียตะวันออกเฉียงเหนือมีประชากรที่มีความหลากหลายทางวัฒนธรรมและเศรษฐกิจ การศึกษาในครั้งนี้มุ่งเน้นไปที่การวิเคราะห์การเสียชีวิตจากโรคเรื้อรังในช่วงปี 1990 ถึง 2019 ซึ่งเป็นช่วงเวลาที่มีการเปลี่ยนแปลงทางการแพทย์และการพัฒนาสังคมอย่างมีนัยสำคัญ
 
-ผลการวิเคราะห์นี้ชี้ให้เห็นถึงการเปลี่ยนแปลงในพฤติกรรมและการเข้าถึงบริการด้านสุขภาพ ซึ่งเป็นสิ่งสำคัญที่ช่วยลดอัตราการเสียชีวิตในทวีปแอฟริกา และเปิดโอกาสในการศึกษาเพิ่มเติมเกี่ยวกับกลยุทธ์ที่สามารถนำไปใช้ในการพัฒนาสุขภาพในภูมิภาคอื่นๆ ได้อีกด้วย
+![png](Markdown/Death_Cause_Analysis_files/Cause_of_Death.png)
 
-Find slope of Risk Factor trends
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<div id="death-cause-analysys-sea"></div>
 
-```python
-ratio_1990_2019 = ratio.loc[(ratio['Year'] == 1990) | (ratio['Year'] == 2019)]
+### อัตราการเปลี่ยนแปลงจากอัตราส่วนผู้เสียชีวิตต่อจำนวนประชากรในภูมิภาคเอเชียตะวันออกเฉียงเหนือ
 
-# Group by Continent and calculate the slope for each risk factor
-for risk_factor in grouped_diseases.keys():
-  slope_by_continent = ratio_1990_2019.groupby('Continent').apply(lambda x: np.polyfit(x['Year'], x[risk_factor], 1)[0]).to_dict()
+การวิเคราะห์ข้อมูลการเสียชีวิตที่เกิดจากโรคเรื้อรังโดยเฉพาะอย่างยิ่งเราจะพิจารณาถึงอัตราส่วนผู้เสียชีวิตต่อจำนวนประชากร เพื่อให้เห็นถึงความสัมพันธ์ระหว่างจำนวนผู้เสียชีวิตและขนาดของประชากรในภูมิภาคนี้
 
-# Assuming 'ratio' DataFrame is defined as in your provided code.
-ratio_1990_2019 = ratio.loc[(ratio['Year'] == 1990) | (ratio['Year'] == 2019)]
-
-# Group by Continent and calculate the slope for each risk factor
-for risk_factor in grouped_diseases.keys():
-  slope_by_continent = ratio_1990_2019.groupby('Continent').apply(lambda x: np.polyfit(x['Year'], x[risk_factor], 1)[0]).to_dict()
-  print(f"\033[01m\033[31mSlope of {risk_factor} by Continent:\033[0m")
-  for continent, slope in slope_by_continent.items():
-      print(f"  {continent}: {slope:}")
-  print("\033[01m______________________________________________\033[0m\n")
-
-```
-
-    Slope of Lifestyle-Related_Factors by Continent:
-      Africa: -1.958727323181144e-05
-      Americas: -4.7636298215293855e-07
-      Asia: -9.674371651907292e-06
-      Europe: -4.492648567769799e-07
-      Oceania: -3.551315599043181e-07
-    ______________________________________________
-    
-    Slope of Environmental_and_External Causes by Continent:
-      Africa: -1.0695633462923546e-05
-      Americas: -4.239650756317739e-06
-      Asia: -5.470627899105682e-06
-      Europe: -6.296001231262002e-06
-      Oceania: -2.56393996443035e-06
-    01m______________________________________________
-    
-    31mSlope of Infectious_Diseases by Continent:
-      Africa: -9.388650638950891e-05
-      Americas: -1.564947757361615e-05
-      Asia: -3.878980954356603e-05
-      Europe: -1.655097813333013e-06
-      Oceania: 4.858727112427704e-08
-    ______________________________________________
-    
-    Slope of Chronic_Diseases by Continent:
-      Africa: -4.141534726765924e-05
-      Americas: 2.6816478328234072e-05
-      Asia: 2.5630820304253615e-05
-      Europe: 3.149687851774917e-05
-      Oceania: 1.4858158417317503e-06
-    ______________________________________________
-
-##### **South-Eastern Asia**
-
-**การวิเคราะห์แนวโน้มการเสียชีวิตในภูมิภาคเอเชีย: ปัจจัยเสี่ยงและสาเหตุการเสียชีวิต**
-
-การวิเคราะห์การเสียชีวิตในภูมิภาคเอเชียมีความสำคัญต่อการเข้าใจปัญหาสุขภาพที่มีผลกระทบต่อประชากรในภูมิภาคนี้อย่างลึกซึ้ง โดยภูมิภาคเอเชียซึ่งมีความหลากหลายทางวัฒนธรรมและสังคมยังคงเผชิญกับความท้าทายด้านสุขภาพที่แตกต่างกันไปตามแต่ละประเทศ ในการศึกษานี้ เราจะทำการวิเคราะห์อัตราการเสียชีวิตจากโรคเรื้อรัง ซึ่งอัตราการเปลี่ยนแปลงนั้นมีแนวโน้มเพิ่มขึ้นอย่างต่อเนื่อง
-การวิเคราะห์ในครั้งนี้จะช่วยให้เราเข้าใจภาพรวมของสถานการณ์สุขภาพในภูมิภาคเอเชีย พร้อมทั้งเสนอแนวทางในการพัฒนานโยบายและกลยุทธ์ที่สามารถลดอัตราการเสียชีวิตจากโรคเรื้อรัง และยกระดับคุณภาพชีวิตของประชากรในอนาคตได้อย่างมีประสิทธิภาพ
+![png](Markdown/Death_Cause_Analysis_files/Changing_rate_of_Death_causes_from_chronic_disease_risk_factors_in_SEA.png)
 
 
-```python
-SEA = df_Main_data_new.loc[(df_Main_data_new['Risk_Factor'] == 'Chronic_Diseases')&(df_Main_data_new['Sub_region'] == 'South-Eastern Asia')].groupby(['Country','Cause'])['Death_count'].sum().unstack()
-```
+โดยเน้นไปที่การวิเคราะห์อัตราการเปลี่ยนแปลงจากอัตราส่วนผู้เสียชีวิตต่อจำนวนประชากรในภูมิภาคเอเชียตะวันออกเฉียงเหนือ โดยเฉพาะอย่างยิ่งการเสียชีวิตจากโรคเรื้อรังที่เป็นปัญหาสำคัญในระดับภูมิภาค การวิเคราะห์นี้มีวัตถุประสงค์เพื่อให้เข้าใจถึงแนวโน้มการเปลี่ยนแปลงอัตราการเสียชีวิตในภูมิภาคนี้ในช่วง 1990 - 2019
+
+![png](Markdown/Death_Cause_Analysis_files/Comparison_of_Slope_of_Death_Population_Ratio_for_Chronic_Diseases_in_THA_VNM_MMR_and_PHL_(1990-2019).png)
+
+การเปรียบเทียบกับประเทศที่มีปัจจัยคล้ายคลึงกับประเทศไทย เช่น เมียนมาร์ ฟิลิปปินส์ และเวียดนาม จะช่วยให้เราเห็นแนวโน้มและความแตกต่างในอัตราการเสียชีวิตจากโรคเรื้อรังในประเทศเพื่อนบ้าน จากข้อมูลแสดงให้เห็นว่าประเทศเมียนมาร์มีอัตราการเสียชีวิตต่อประชากรที่ลดลงอย่างน่าสนใจ ซึ่งเป็นประเด็นที่ควรศึกษาต่อไปในอนาคต เพื่อใช้ข้อมูลนี้ในการพัฒนากลยุทธ์ที่เหมาะสม นอกจากนี้ยังเป็นข้อมูลพื้นฐานในการสร้างกลยุทธ์เพื่อลดอัตราการเสียชีวิตจากโรคเรื้อรังในอนาคต
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Event Analysis
+
+### Detail of Event during 1990 - 2019
+
+Events That Increased Mortality Rates
+
+1. เหตุการณ์ที่ทำให้มีผู้เสียชีวิตเพิ่มขึ้น **การแพร่ระบาดของ HIV/AIDS**: พ.ศ. 2533 (1990) - ตลอดทศวรรษ 1990 โดยเฉพาะในแอฟริกาและเอเชีย 
+ - [WHO HIV/AIDS page](https://www.who.int/health-topics/hiv-aids#tab=tab_1)
+ - [40 Years of AIDS](https://www.ucsf.edu/news/2021/06/420686/40-years-aids-timeline-epidemic)
+2. **การระบาดของไข้มาลาเรียในแอฟริกา**: ทศวรรษ 1990 และ 2000 - ภูมิภาคแอฟริกาประสบปัญหาอัตราการตายจากมาลาเรียสูง จนกระทั่งมีการกระจายการใช้มุ้งและยาต้านมาลาเรียที่ช่วยลดจำนวนการเสียชีวิต [WHO Malaria Overview](https://www.who.int/health-topics/malaria)
+3. **สงครามยูโกสลาเวีย**: พ.ศ. 2534-2544 (1991-2001) - ความขัดแย้งและสงครามกลางเมืองในยูโกสลาเวีย ส่งผลให้มีผู้เสียชีวิตจำนวนมาก[BBC's Balkans Conflict Overview](https://www.bbc.com/news/world-europe-17632399)
+4. **การฆ่าล้างเผ่าพันธุ์ในรวันดา**: พ.ศ. 2537 (1994) - เหตุการณ์นี้ทำให้มีผู้เสียชีวิตกว่า 800,000 คนภายในเวลาไม่กี่เดือน [UN - Rwanda Genocide](https://www.un.org/en/preventgenocide/rwanda/education/rwandagenocide.shtml)
+5. **ภาวะขาดแคลนอาหารในเกาหลีเหนือ**: พ.ศ. 2537-2541 (1994-1998) - การขาดแคลนอาหารอย่างรุนแรงในเกาหลีเหนือทำให้ประชากรจำนวนมากเสียชีวิตจากภาวะอดอยาก[Council on Foreign Relations - North Korea Famine](https://www.cfr.org/backgrounder/north-korea-famine)
+6. **แผ่นดินไหวในโกเบ ประเทศญี่ปุ่น**: พ.ศ. 2538 (1995) - คร่าชีวิตผู้คนกว่า 6,000 คน [1995 Kobe Earthquake](https://factsanddetails.com/japan/cat26/sub160/item863.html)
+7. **สงครามกลางเมืองในเซียร์ราลีโอน**: พ.ศ. 2534-2545 (1991-2002) - ความรุนแรงจากสงครามกลางเมืองส่งผลให้มีผู้เสียชีวิตและผู้พลัดถิ่นจำนวนมาก [Sierra Leone Civil War](https://www.blackpast.org/global-african-history/sierra-leone-civil-war-1991-2002/)
+8. **การแพร่ระบาดของวัณโรค (TB)**: ตลอดทศวรรษ 1990 - วัณโรคกลับมาแพร่ระบาดในหลายประเทศทั่วโลก [Tuberculosis](https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-024-09079-5)
+9. **สงครามอัฟกานิสถาน**: พ.ศ. 2544-ปัจจุบัน (2001-ปัจจุบัน) - ความขัดแย้งที่ยืดเยื้อในอัฟกานิสถานทำให้มีผู้เสียชีวิตจากการสู้รบและการโจมตีทางอากาศอย่างต่อเนื่อง [BBC - War in Afghanistan](https://www.bbc.com/news/world-south-asia-11451718)
+10. **แผ่นดินไหวและสึนามิในมหาสมุทรอินเดีย**: พ.ศ. 2547 (2004) - คร่าชีวิตผู้คนกว่า 230,000 คนในหลายประเทศ [Tsunami Report](https://www.britannica.com/event/Indian-Ocean-tsunami-of-2004)
+11. **แผ่นดินไหวในปากีสถาน**: พ.ศ. 2548 (2005) - แผ่นดินไหวขนาดใหญ่ทำให้มีผู้เสียชีวิตประมาณ 80,000 คนในปากีสถาน [2005 Pakistan Earthquake](https://www.britannica.com/event/Kashmir-earthquake-of-2005)
+12. **สงครามอิรัก**: พ.ศ. 2546-2554 (2003-2011) - สงครามและความขัดแย้งในอิรัก ส่งผลให้มีการเสียชีวิตเป็นจำนวนมาก [Iraq War](https://www.britannica.com/event/Iraq-War)
+13. **ภัยพิบัติไซโคลนนาร์กีสในพม่า**: พ.ศ. 2551 (2008) - พายุไซโคลนส่งผลให้มีผู้เสียชีวิตกว่า 130,000 คนในพม่า [Cyclone Nargis](https://reliefweb.int/report/myanmar/myanmar-cyclone-nargis-2008-facts-and-figures#:~:text=Facts%20and%20figures%20On%202%20May%202008%2C%20Cyclone,37%20townships%20were%20significantly%20affected%20by%20the%20cyclone.)
+14. **ไข้หวัดใหญ่ H1N1**: พ.ศ. 2552 (2009) - การแพร่ระบาดของไวรัส H1N1 ส่งผลให้มีผู้เสียชีวิตทั่วโลก [H1N1 Pandemic](https://www.britannica.com/event/influenza-pandemic-H1N1-of-2009/Pandemic-status-and-response)
+15. **การแพร่ระบาดของโรค SARS**: พ.ศ. 2545-2546 (2002-2003) - ไวรัส SARS ส่งผลให้มีผู้เสียชีวิตหลายร้อยคนทั่วโลก [WHO - SARS](https://www.who.int/health-topics/severe-acute-respiratory-syndrome#tab=tab_1)
+16. **สงครามกลางเมืองในซีเรีย**: พ.ศ. 2554-ปัจจุบัน (2011-ปัจจุบัน) - ความขัดแย้งในซีเรียทำให้มีผู้เสียชีวิตเป็นจำนวนมาก [UNHCR - Syrian Refugee Crisis](https://www.unhcr.org/syria-emergency.html)
+17. **พายุเฮอริเคนแคทรีนา**: พ.ศ. 2548 (2005) - พายุเฮอริเคนที่ทำลายล้างบริเวณสหรัฐอเมริกา ส่งผลให้มีการเสียชีวิตและความเสียหายอย่างมาก[Hurricane Katrina](https://www.britannica.com/event/Hurricane-Katrina#:~:text=Hurricane%20Katrina%2C%20tropical%20cyclone%20that%20struck%20the%20southeastern,percent%20between%20the%20fall%20of%202005%20and%202011.) 
+18. **ไฟป่าในรัสเซีย**: พ.ศ. 2553 (2010) - ไฟป่าและคลื่นความร้อนที่ตามมาส่งผลให้มีผู้เสียชีวิตจำนวนมากจากปัญหาทางเดินหายใจ [Russia Wildfires](https://reliefweb.int/disaster/wf-2010-000147-rus#:~:text=Unusual%20and%20long%20heat%20waves%20with%20temperatures%20peaking,of%20land%20and%20killing%20more%20than%2050%20people.)
+19. **แผ่นดินไหวในไฮติ**: พ.ศ. 2553 (2010) - หนึ่งในเหตุการณ์แผ่นดินไหวที่ทำลายล้างมากที่สุด ส่งผลให้มีผู้เสียชีวิตกว่า 200,000 คน [Haiti Earthquake](https://www.britannica.com/event/2010-Haiti-earthquake)
+20. **การระบาดของโรคไข้เลือดออกในภูมิภาคเอเชียตะวันออกเฉียงใต้**: พ.ศ. 2553-2562 (2010-2019) - ส่งผลให้มีผู้เสียชีวิตจำนวนมาก โดยเฉพาะในฟิลิปปินส์และเวียดนาม [Dengue](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9848297/)
+21. **ความอดอยากในแอฟริกา**: โดยเฉพาะในโซมาเลีย พ.ศ. 2554 (2011) - ส่งผลให้มีผู้เสียชีวิตหลายหมื่นคนเนื่องจากการขาดแคลนอาหารอย่างรุนแรง[Somalia Famine](https://charityandsecurity.org/humanitarian-safeguards/somalia-2011-famine-and-its-response/#:~:text=The%202011%20Famine%20Following%20months%20of%20drought%2C%20rising,Lower%20Shabelle%2C%20were%20experiencing%20famine%20in%20July%202011.) 
+22. **คลื่นความร้อนในยุโรป**: พ.ศ. 2556 (2013) - คลื่นความร้อนทำให้มีผู้เสียชีวิตจากโรคที่เกี่ยวกับอุณหภูมิสูง โดยเฉพาะในฝรั่งเศสและเยอรมนี [Heatwaves](https://academic.oup.com/eurpub/article/16/6/592/587672)
+23. **การแพร่ระบาดของโรค Ebola**: พ.ศ. 2557-2559 (2014-2016) - การระบาดครั้งใหญ่ในแอฟริกาตะวันตก ส่งผลให้มีผู้เสียชีวิตนับหมื่นคน [Ebola](https://www.sciencedirect.com/science/article/pii/S1876034120304275)
+24. **แผ่นดินไหวในเนปาล**: พ.ศ. 2558 (2015) - แผ่นดินไหวครั้งใหญ่ที่ทำให้มีผู้เสียชีวิตกว่า 9,000 คน [Nepal Earthquake](https://www.britannica.com/topic/Nepal-earthquake-of-2015)
+25. **การแพร่ระบาดของโรคไข้เลือดออก**: ตลอดทศวรรษ 2010 - การระบาดของไข้เลือดออกในภูมิภาคเอเชียและอเมริกาใต้ ทำให้มีผู้เสียชีวิตจำนวนมาก[WHO - Dengue](https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue)
+   
+##
+เหตุการณ์ที่ทำให้มีผู้เสียชีวิตลดลง
+
+1. **การรณรงค์เรื่องการป้องกัน HIV/AIDS**: พ.ศ. 2533-2542 (1990-1999) - การรณรงค์ใช้ถุงยางอนามัยและการตรวจเช็คสุขภาพอย่างสม่ำเสมอ รวมถึงการพัฒนายาต้านไวรัส ช่วยลดอัตราการเสียชีวิตจากโรคเอดส์ในประเทศพัฒนาแล้วและในบางประเทศในแอฟริกาและเอเชีย [HIV/AIDS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8363183/)
+2. **การขยายการฉีดวัคซีนในเด็ก**: ทศวรรษ 1990 - การฉีดวัคซีนป้องกันโรคหัด โปลิโอ และโรคปอดบวมอย่างแพร่หลายทั่วโลก ส่งผลให้อัตราการเสียชีวิตในเด็กจากโรคติดเชื้อลดลงอย่างมีนัยสำคัญ [Immunization](https://publications.aap.org/pediatrics/article/150/3/e2021056013/188495/Impact-of-Routine-Childhood-Immunization-in?autologincheck=redirected)
+3. **การเข้าถึงยาต้านไวรัสสำหรับโรค HIV/AIDS**: พ.ศ. 2543-2552 (2000-2009) - ประเทศต่างๆ เริ่มเข้าถึงยาต้านไวรัสในวงกว้าง โดยเฉพาะในแอฟริกา ทำให้อัตราการเสียชีวิตจากโรคนี้ลดลง [HIV Update](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3078828/)
+4. **การพัฒนาวัคซีนโรคมาลาเรีย**: พ.ศ. 2543-2552 (2000-2009) - การใช้มุ้งและยาฆ่ายุง รวมถึงการเข้าถึงยารักษามาลาเรีย ช่วยลดการเสียชีวิตจากโรคนี้ในภูมิภาคแอฟริกา [WHO Malaria Report](https://www.who.int/news-room/fact-sheets/detail/malaria)
+5. **การใช้ยากันเลือดแข็งตัวและการรักษาหลอดเลือดหัวใจตีบ**: พ.ศ. 2543-2552 (2000-2009) - เทคโนโลยีทางการแพทย์และการรักษาโรคหัวใจและหลอดเลือดก้าวหน้าขึ้น ลดการเสียชีวิตจากโรคหัวใจและหลอดเลือดในหลายประเทศ [Cardiovascular](https://pubmed.ncbi.nlm.nih.gov/19571765/)
+6. **การใช้ยาและวัคซีนป้องกันไข้หวัดใหญ่**: พ.ศ. 2543-2552 (2000-2009) - วัคซีนไข้หวัดใหญ่และการเข้าถึงยาต้านไวรัส ทำให้การระบาดของไข้หวัดใหญ่สามารถควบคุมได้ดีขึ้น และลดการเสียชีวิตจากโรคนี้ [Flu](https://pubmed.ncbi.nlm.nih.gov/20718130/)
+7. **การรณรงค์ป้องกันการสูบบุหรี่**: พ.ศ. 2553-2562 (2010-2019) - หลายประเทศเริ่มดำเนินการนโยบายต่อต้านการสูบบุหรี่ ซึ่งช่วยลดการเสียชีวิตจากโรคที่เกี่ยวข้องกับปอด เช่น มะเร็งปอด และโรคปอดอุดกั้นเรื้อรัง[WHO - Tobacco](https://www.who.int/campaigns/world-no-tobacco-day/world-no-tobacco-day-2019/about-the-campaign) 
+8. **การเข้าถึงยารักษาโรคมะเร็งที่ดีขึ้น**: พ.ศ. 2553-2562 (2010-2019) - ยาเคมีบำบัดและการรักษาด้วยเทคโนโลยีใหม่ช่วยลดการเสียชีวิตจากโรคมะเร็งในประเทศพัฒนาแล้ว [Cancer Treatments](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8366192/)
+9. **การรณรงค์เรื่องความปลอดภัยทางจราจร**: พ.ศ. 2553-2562 (2010-2019) - การรณรงค์ใช้เข็มขัดนิรภัย หมวกกันน็อค และกฎหมายจำกัดความเร็วในหลายประเทศช่วยลดการเสียชีวิตจากอุบัติเหตุทางถนน[Road Safety](https://www.sciencedirect.com/science/article/pii/S0386111211000045)
+10. **การพัฒนาวัคซีน HPV**: พ.ศ. 2550-2552 (2007-2009) - การฉีดวัคซีนป้องกันไวรัส HPV ที่เป็นสาเหตุของมะเร็งปากมดลูก ช่วยลดอัตราการเสียชีวิตจากมะเร็งปากมดลูกในหลายประเทศ[HPV](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8828558/) 
+11. **การเข้าถึงน้ำดื่มที่สะอาด**: ทศวรรษ 2000-2010 - โครงการด้านน้ำดื่มสะอาดและสุขาภิบาลในหลายประเทศ โดยเฉพาะในแอฟริกาและเอเชีย ส่งผลให้อัตราการเสียชีวิตจากโรคติดต่อที่เกิดจากน้ำ เช่น โรคท้องร่วง ลดลงอย่างมาก
+- [INDIA Water Portal](https://www.indiawaterportal.org/health-and-sanitation/sanitation/2010-unwater-global-annual-assessment-sanitation-and-drinkingwater-glaas)
+- [Our World in Data](https://ourworldindata.org/diarrheal-diseases)
 
 
-```python
-print(f"Death causes from \033[31m\033[01mChronic disease risk factors.\033[0m")
-SEA.sum().sort_values(ascending=False).reset_index().rename(columns={0: 'Total'})
-```
+##
+เหตุการณ์ในประเทศไทย 
 
-    Death causes from Chronic disease risk factors.
+เหตุการณ์ที่ทำให้มีอัตราการเสียชีวิตเพิ่มขึ้น: 
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Cause</th>
-      <th>Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Cardiovascular_Diseases</td>
-      <td>31061773.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Neoplasms</td>
-      <td>13230869.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Digestive_Diseases</td>
-      <td>6653350.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Lower_Respiratory_Infections</td>
-      <td>6624688.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Chronic_Respiratory_Diseases</td>
-      <td>6571241.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Cirrhosis_and_Other_Chronic_Liver_Diseases</td>
-      <td>4381871.0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Diabetes_Mellitus</td>
-      <td>4067490.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Chronic_Kidney_Disease</td>
-      <td>2967261.0</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Alzheimers_Disease_and_Other_Dementias</td>
-      <td>1648899.0</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Parkinsons_Disease</td>
-      <td>411336.0</td>
-    </tr>
-  </tbody>
-</table>
+1. **การระบาดของ HIV/AIDS (1990s - ต้น 2000s)** ประเทศไทยได้รับผลกระทบอย่างมากจากวิกฤต HIV/AIDS ในช่วงทศวรรษ 1990 ก่อนที่การเข้าถึงยาต้านไวรัสจะเริ่มลดจำนวนผู้เสียชีวิตลงในทศวรรษต่อมา [UNAIDS - Thailand](https://www.unaids.org/en/regionscountries/countries/thailand)
+2. **สึนามิในมหาสมุทรอินเดีย (2004)** สึนามิที่กระทบภาคใต้ของประเทศไทยในปี 2004 ทำให้มีผู้เสียชีวิตประมาณ 5,400 ราย [Tsunami Report](https://www.britannica.com/event/Indian-Ocean-tsunami-of-2004) 
+3. **น้ำท่วมใหญ่ในประเทศไทย (2011)** น้ำท่วมครั้งใหญ่ในภาคกลางและภาคเหนือของประเทศไทยส่งผลให้มีผู้เสียชีวิตหลายร้อยคน[Thailand Floods](https://www.thaiwater.net/uploads/contents/current/2011/flood54Eng.html)
 
-**10 อันดับโรคเรื้อรังที่ทำให้ผู้คนในภูมิภาคเอเชียตะวันออกเฉียงเหนือเสียชีวิตมากที่สุด**
+เหตุการณ์ที่ทำให้อัตราการเสียชีวิตลดลง: 
 
-```python
-SEA.sum().sort_values(ascending=False).plot(kind='barh')
-plt.title('Chronic_Diseases in Southeast Asia from 1990-2019')
-plt.xlabel('Cause of Death')
-plt.ylabel('Total Death Count')
-plt.show()
-```
+1. **โครงการหลักประกันสุขภาพถ้วนหน้า (2002)** การแนะนำโครงการหลักประกันสุขภาพถ้วนหน้าในปี 2002 ทำให้ประชาชนเข้าถึงบริการสุขภาพได้มากขึ้น ส่งผลให้อัตราการเสียชีวิตลดลงจากโรคที่ป้องกันและรักษาได้ [Thailand UHC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6560367/)
+2. **การลดอัตราการเสียชีวิตของมารดาและทารก (2000s)** โครงการด้านสุขภาพของมารดาและทารกมีการลงทุนเพิ่มขึ้น ทำให้อัตราการเสียชีวิตลดลง[WHO - Thailand UHC](https://www.who.int/news/item/09-05-2023-global-progress-in-tackling-maternal-and-newborn-deaths-stalls-since-2015--un)
+3. **การลดการเสียชีวิตจากมาลาเรีย (2000s)** การรณรงค์ป้องกันมาลาเรียโดยเฉพาะในพื้นที่ชายแดน ช่วยลดการเสียชีวิตจากโรคมาลาเรียได้อย่างมาก [Malaria in Thailand](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6553898/)
+4. **การพัฒนาวิธีการรักษาและการป้องกันโรคหัวใจและหลอดเลือด (1990s)** ทำให้อัตราการเสียชีวิตจากโรคเหล่านี้ลดลง [WHO - Cardiovascular Diseases](https://www.who.int/health-topics/cardiovascular-diseases)
+5. **การรณรงค์ต่อต้านการสูบบุหรี่ (2000s)** การรณรงค์ต่อต้านการสูบบุหรี่และการออกกฎหมายควบคุมการสูบบุหรี่มีส่วนช่วยลดการเสียชีวิตที่เกี่ยวข้องกับการสูบบุหรี่
 
-
-    
-![png](Markdown/Death_Cause_Analysis_files/Death_Cause_Analysis_116_0.png)
-    
-
-```python
-SEA_trends = pd.merge(df_Main_data_new, df_population_melted, left_on=['Code', 'Year'], right_on=['Country Code', 'Year'], how='outer')
-```
+<b>Make time line for the Event during 1990 - 2019</b>
 
 
 ```python
-SEA_trends = SEA_trends.loc[(SEA_trends['Sub_region'] == 'South-Eastern Asia')&((SEA_trends['Year'] == 1990)|(SEA_trends['Year'] == 2019))].reset_index()
-SEA_trends['Death_Population_Ratio'] = SEA_trends['Death_count'] / SEA_trends['Population']
-```
+import plotly.express as px
+import pandas as pd
 
-**การวิเคราะห์อัตราการเปลี่ยนแปลงจากอัตราส่วนผู้เสียชีวิตต่อจำนวนประชากรในภูมิภาคเอเชียตะวันออกเฉียงเหนือ**
-
-
-```python
-# prompt: find slope of each cause in from SEA_trends.loc[(SEA_trends['Risk_Factor'] == 'Chronic_Diseases')&((SEA_trends['Year'] == 1990)|(SEA_trends['Year'] == 2019))]
-
-# Assuming SEA_trends DataFrame is defined as in your provided code.
-SEA_trends_chronic_1990_2019 = SEA_trends.loc[(SEA_trends['Risk_Factor'] == 'Chronic_Diseases') & ((SEA_trends['Year'] == 1990) | (SEA_trends['Year'] == 2019))]
-print("\033[01m\033[31mChanging rate of Death causes from chronic disease risk factors in SEA\033[0m\n")
-# Group by Cause and calculate the slope for each cause
-for cause in SEA_trends_chronic_1990_2019['Cause'].unique():
-  SEA_trends_cause = SEA_trends_chronic_1990_2019[SEA_trends_chronic_1990_2019['Cause'] == cause]
-  if len(SEA_trends_cause) >= 2:  # Ensure we have data for both 1990 and 2019
-    slope = np.polyfit(SEA_trends_cause['Year'], SEA_trends_cause['Death_Population_Ratio'], 1)[0]
-    print(f"{cause}: {slope}")
-```
-
-    Changing rate of Death causes from chronic disease risk factors in SEA
-    
-    Alzheimers_Disease_and_Other_Dementias: 2.531222640816224e-06
-    Parkinsons_Disease: 5.610861205072793e-07
-    Cardiovascular_Diseases: 1.4562434004328397e-05
-    Lower_Respiratory_Infections: -1.8908377938558168e-05
-    Neoplasms: 1.0047699589140254e-05
-    Diabetes_Mellitus: 2.21163440883402e-06
-    Chronic_Kidney_Disease: 2.1672724790911164e-06
-    Chronic_Respiratory_Diseases: -1.897921919782548e-06
-    Cirrhosis_and_Other_Chronic_Liver_Diseases: 4.470115520672339e-07
-    Digestive_Diseases: -4.4090568496890946e-07
-    
-
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Assuming SEA_trends DataFrame is defined as in your provided code.
-SEA_trends_chronic_1990_2019 = SEA_trends.loc[
-    (SEA_trends["Risk_Factor"] == "Chronic_Diseases")
-    & ((SEA_trends["Year"] == 1990) | (SEA_trends["Year"] == 2019))
+# ตัวอย่างข้อมูลเหตุการณ์
+events = [
+    {"event": "HIV/AIDS Epidemic", "start": 1990, "end": 2005, "category": "Increase"},
+    {"event": "Malaria Outbreak in Africa", "start": 1990, "end": 2000, "category": "Increase"},
+    {"event": "Yugoslav Wars", "start": 1991, "end": 2001, "category": "Increase"},
+    {"event": "Rwandan Genocide", "start": 1994, "end": 1994, "category": "Increase"},
+    {"event": "Food Shortage in North Korea", "start": 1994, "end": 1998, "category": "Increase"},
+    {"event": "Kobe Earthquake, Japan", "start": 1995, "end": 1995, "category": "Increase"},
+    {"event": "Sierra Leone Civil War", "start": 1991, "end": 2002, "category": "Increase"},
+    {"event": "Tuberculosis (TB) Resurgence", "start": 1990, "end": 1999, "category": "Increase"},
+    {"event": "War in Afghanistan", "start": 2001, "end": 2023, "category": "Increase"},
+    {"event": "Indian Ocean Earthquake and Tsunami", "start": 2004, "end": 2004, "category": "Increase"},
+    {"event": "Pakistan Earthquake", "start": 2005, "end": 2005, "category": "Increase"},
+    {"event": "Iraq War", "start": 2003, "end": 2011, "category": "Increase"},
+    {"event": "Cyclone Nargis in Myanmar", "start": 2008, "end": 2008, "category": "Increase"},
+    {"event": "H1N1 Influenza", "start": 2009, "end": 2009, "category": "Increase"},
+    {"event": "SARS Epidemic", "start": 2002, "end": 2003, "category": "Increase"},
+    {"event": "Syrian Civil War", "start": 2011, "end": 2023, "category": "Increase"},
+    {"event": "Hurricane Katrina", "start": 2005, "end": 2005, "category": "Increase"},
+    {"event": "Wildfires in Russia", "start": 2010, "end": 2010, "category": "Increase"},
+    {"event": "Haiti Earthquake", "start": 2010, "end": 2010, "category": "Increase"},
+    {"event": "Dengue Fever Outbreak in Southeast Asia", "start": 2010, "end": 2019, "category": "Increase"},
+    {"event": "Famine in Africa", "start": 2011, "end": 2011, "category": "Increase"},
+    {"event": "Heatwave in Europe", "start": 2013, "end": 2013, "category": "Increase"},
+    {"event": "Ebola Outbreak", "start": 2014, "end": 2016, "category": "Increase"},
+    {"event": "Nepal Earthquake", "start": 2015, "end": 2015, "category": "Increase"},
+    {"event": "Dengue Fever Epidemic", "start": 2010, "end": 2019, "category": "Increase"},
+    {"event": "HIV/AIDS Prevention Campaign", "start": 1990, "end": 1999, "category": "Decrease"},
+    {"event": "Expansion of Childhood Vaccination", "start": 1990, "end": 1999, "category": "Decrease"},
+    {"event": "Access to Antiretroviral Drugs for HIV/AIDS", "start": 2000, "end": 2009, "category": "Decrease"},
+    {"event": "Development of Malaria Vaccines", "start": 2000, "end": 2009, "category": "Decrease"},
+    {"event": "Use of Anticoagulants and Treatments for Cardiovascular Diseases", "start": 2000, "end": 2009, "category": "Decrease"},
+    {"event": "Use of Influenza Vaccines and Antiviral Medications", "start": 2000, "end": 2009, "category": "Decrease"},
+    {"event": "Anti-Smoking Campaigns", "start": 2010, "end": 2019, "category": "Decrease"},
+    {"event": "Improved Access to Cancer Treatments", "start": 2010, "end": 2019, "category": "Decrease"},
+    {"event": "Traffic Safety Campaigns", "start": 2010, "end": 2019, "category": "Decrease"},
+    {"event": "Development of HPV Vaccines", "start": 2007, "end": 2009, "category": "Decrease"},
+    {"event": "Access to Clean Drinking Water", "start": 2000, "end": 2010, "category": "Decrease"},
+    {"event": "HIV/AIDS Epidemic in Thailand", "start": 1990, "end": 2000, "category": "Increase"},
+    {"event": "Indian Ocean Tsunami in Thailand", "start": 2004, "end": 2004, "category": "Increase"},
+    {"event": "Severe Flooding in Thailand", "start": 2011, "end": 2011, "category": "Increase"},
+    {"event": "Universal Health Coverage Scheme in Thailand", "start": 2002, "end": 2023, "category": "Decrease"},
+    {"event": "Reduction in Maternal and Infant Mortality Rates in Thailand", "start": 2000, "end": 2009, "category": "Decrease"},
+    {"event": "Decrease in Malaria Deaths in Thailand", "start": 2000, "end": 2009, "category": "Decrease"},
+    {"event": "Advances in Treatment and Prevention of Cardiovascular Diseases in Thailand", "start": 1990, "end": 2000, "category": "Decrease"}
 ]
 
-causes = SEA_trends_chronic_1990_2019["Cause"].unique()
-slopes = []
+# สร้าง DataFrame
+df = pd.DataFrame(events)
 
-for cause in causes:
-    SEA_trends_cause = SEA_trends_chronic_1990_2019[
-        SEA_trends_chronic_1990_2019["Cause"] == cause
-    ]
-    if len(SEA_trends_cause) >= 2:  # Ensure we have data for both 1990 and 2019
-        slope = np.polyfit(
-            SEA_trends_cause["Year"], SEA_trends_cause["Death_Population_Ratio"], 1
-        )[0]
-        slopes.append(slope)
-    else:
-        slopes.append(np.nan)  # Append NaN if data is missing for a cause
+# แปลงวันที่เป็น datetime objects
+df["start"] = pd.to_datetime(df["start"], format="%Y")
+df["end"] = pd.to_datetime(df["end"], format="%Y")
 
-# Create a bar plot of the slopes
-plt.figure(figsize=(10, 6))
-colors = ['red' if slope > 0 else 'blue' for slope in slopes] # Assign colors based on slope values
-bars = plt.bar(causes, slopes, color=colors)  # Store the bar objects
+# สร้าง DataFrame แยกสำหรับเหตุการณ์ที่เพิ่มขึ้นและลดลง
+df_increase = df[df["category"] == "Increase"]
+df_decrease = df[df["category"] == "Decrease"]
 
-# Add values on top of the bars
-for bar, slope in zip(bars, slopes):
-    yval = bar.get_height()
-    plt.text(bar.get_x() + bar.get_width()/2, yval, round(slope, 6), ha='center', va='bottom')
+# แยกกราฟเหตุการณ์ที่เพิ่มขึ้น
+df_increase_single_year = df_increase[df_increase["start"] == df_increase["end"]]
+df_increase_multi_year = df_increase[df_increase["start"] != df_increase["end"]]
 
-#plt.bar(causes, slopes, color=colors)
-plt.xlabel("Cause")
-plt.ylabel("Slope")
-plt.title("Changing rate of Death causes from chronic disease risk factors in SEA")
-plt.xticks(rotation=45, ha="right")  # Rotate x-axis labels for better readability
-plt.tight_layout()
-plt.show()
-import matplotlib.pyplot as plt
-import numpy as np
+# สร้างกราฟระยะเวลาสำหรับเหตุการณ์ที่เพิ่มขึ้น (ปีเดียว) พร้อมสีแดง
+fig_increase_single_year = px.timeline(
+    df_increase_single_year,
+    x_start="start",
+    x_end="end",
+    y="event",
+    title="Timeline of Single-Year Events Increasing Mortality (1990-2023)",
+    color_discrete_sequence=["red"]  # กำหนดสีเป็นสีแดง
+)
 
-# Function to calculate slopes for each cause in a DataFrame
-def calculate_slopes(df):
-    """Calculates the slopes for each cause in a DataFrame."""
-    slopes = {}
-    for cause in df['Cause'].unique():
-        df_cause = df[df['Cause'] == cause]
-        if len(df_cause) >= 2:  # Ensure there are at least 2 data points to fit the line
-            slope = np.polyfit(df_cause['Year'], df_cause['Death_Population_Ratio'], 1)[0]
-            slopes[cause] = slope
-    return slopes
+# สร้างกราฟระยะเวลาสำหรับเหตุการณ์ที่เพิ่มขึ้น (หลายปี) พร้อมสีแดง
+fig_increase_multi_year = px.timeline(
+    df_increase_multi_year,
+    x_start="start",
+    x_end="end",
+    y="event",
+    title="Timeline of Multi-Year Events Increasing Mortality (1990-2023)",
+    color_discrete_sequence=["red"]  # กำหนดสีเป็นสีแดง
+)
 
-# Calculate slopes for each country
-tha_slopes = calculate_slopes(SEA_trends_chronic_THA_1990_2019)
-vnm_slopes = calculate_slopes(SEA_trends_chronic_VNM_1990_2019)
-mmr_slopes = calculate_slopes(SEA_trends_chronic_MMR_1990_2019)
-phl_slopes = calculate_slopes(SEA_trends_chronic_PHL_1990_2019)
+# สร้างกราฟระยะเวลาสำหรับเหตุการณ์ที่ลดลง พร้อมสีเขียว
+fig_decrease = px.timeline(
+    df_decrease,
+    x_start="start",
+    x_end="end",
+    y="event",
+    title="Timeline of Events Decreasing Mortality (1990-2023)",
+    color_discrete_sequence=["#0000FF"]  # กำหนดสีเป็นสีเขียว
+)
 
-# Ensure all countries have the same causes for a fair comparison (adjust if necessary)
-causes = list(tha_slopes.keys())
+# จัดเรียงเหตุการณ์ตามเวลา
+fig_increase_single_year.update_yaxes(categoryorder="total ascending")
+fig_increase_multi_year.update_yaxes(categoryorder="total ascending")
+fig_decrease.update_yaxes(categoryorder="total ascending")
 
-# Create a bar plot comparing the slopes for THA, VNM, MMR, PHL
-plt.figure(figsize=(14, 8))
+# ตั้งค่า x-axis ให้ครอบคลุมเหตุการณ์ทั้งหมด
+fig_increase_single_year.update_layout(xaxis_range=[df["start"].min(), df["end"].max()])
+fig_increase_multi_year.update_layout(xaxis_range=[df["start"].min(), df["end"].max()])
+fig_decrease.update_layout(xaxis_range=[df["start"].min(), df["end"].max()])
 
-width = 0.2  # Set the width for each bar
-x = np.arange(len(causes))  # Define the positions for the causes on the x-axis
+# เพิ่ม categoryarray เพื่อให้แสดงทุกเหตุการณ์ในแกน Y
+fig_increase_single_year.update_yaxes(categoryarray=df_increase_single_year['event'])
+fig_increase_multi_year.update_yaxes(categoryarray=df_increase_multi_year['event'])
+fig_decrease.update_yaxes(categoryarray=df_decrease['event'])
 
-# Plot the bar for each country with different offsets
-plt.bar(x - 1.5 * width, [tha_slopes[cause] for cause in causes], width, label='THA')
-plt.bar(x - 0.5 * width, [vnm_slopes[cause] for cause in causes], width, label='VNM')
-plt.bar(x + 0.5 * width, [mmr_slopes[cause] for cause in causes], width, label='MMR')
-plt.bar(x + 1.5 * width, [phl_slopes[cause] for cause in causes], width, label='PHL')
-
-# Customize the x-axis and labels
-plt.xticks(x, causes, rotation=45, ha='right')
-plt.xlabel('Cause of Death')
-plt.ylabel('Slope (Change in Death/Population Ratio)')
-plt.title('Comparison of Slope of Death/Population Ratio for Chronic Diseases in THA, VNM, MMR, and PHL (1990-2019)')
-plt.legend(title='Country')
-plt.grid(True, axis='y')  # Add gridlines only for the y-axis
-
-plt.tight_layout()
-plt.show()
-```
-    
-![png](Markdown/Death_Cause_Analysis_files/Death_Cause_Analysis_121_0.png)
-
-    
-![png](Markdown/Death_Cause_Analysis_files/Death_Cause_Analysis_121_1.png)
-    
-
-##### **การวิเคราะห์แนวโน้มการเปลี่ยนแปลงอัตราการเสียชีวิตในทวีปเอเชียและการเปรียบเทียบกับประเทศไทย**
-
-กราฟด้านบนแสดงให้เห็นภาพรวมของการเปลี่ยนแปลงอัตราการเสียชีวิตในทวีปเอเชียการวิเคราะห์ในครั้งนี้มุ่งเน้นไปที่การเปรียบเทียบระหว่างประเทศไทยและประเทศอื่น ๆ ที่มีปัจจัยทางสังคม เศรษฐกิจ และวัฒนธรรมใกล้เคียงกัน เช่น เวียดนามและฟิลิปปินส์ และเมียนมาร์
+# เพิ่มจุดปีลงไปในกราฟ
+for index, row in df_increase_single_year.iterrows():
+    fig_increase_single_year.add_annotation(
+        x=row["start"],
+        y=row["event"],
+        text=str(row["start"].year),
+        showarrow=True,
+        arrowhead=2,
+        ax=0,
+        ay=-40,
+        font=dict(size=10),
+        bgcolor="white",
+        bordercolor="black",
+        borderwidth=1,
+        borderpad=4,
+    )
 
 
-```python
-# prompt: Find slope of each cause in from SEA_trends.loc[(SEA_trends['Risk_Factor'] == 'Chronic_Diseases')&(SEA_trends['Code']=='THA')&((SEA_trends['Year'] == 1990)|(SEA_trends['Year'] == 2019))]
-# prompt: Find slope of each cause in from SEA_trends.loc[(SEA_trends['Risk_Factor'] == 'Chronic_Diseases')&(SEA_trends['Code']=='THA')&((SEA_trends['Year'] == 1990)|(SEA_trends['Year'] == 2019))]
+# เพิ่ม grid แนวนอน
+fig_increase_single_year.update_yaxes(showgrid=True)
 
-# Assuming SEA_trends DataFrame is defined as in your provided code.
-SEA_trends_chronic_THA_1990_2019 = SEA_trends.loc[(SEA_trends['Risk_Factor'] == 'Chronic_Diseases') & (SEA_trends['Code'] == 'THA') & ((SEA_trends['Year'] == 1990) | (SEA_trends['Year'] == 2019))]
+# แสดงกราฟ
+fig_increase_single_year.show()
+fig_increase_multi_year.show()
+fig_decrease.show()
 
-print(f"\033[31m\nSlope of Death causes from chronic disease risk factors in \033[01mTHA\033[0m\n")
-
-# Group by Cause and calculate the slope for each cause
-for cause in SEA_trends_chronic_THA_1990_2019['Cause'].unique():
-  SEA_trends_cause = SEA_trends_chronic_THA_1990_2019[SEA_trends_chronic_THA_1990_2019['Cause'] == cause]
-  if len(SEA_trends_cause) >= 2:  # Ensure we have data for both 1990 and 2019
-    slope = np.polyfit(SEA_trends_cause['Year'], SEA_trends_cause['Death_Population_Ratio'], 1)[0]
-    print(f"{cause}: {slope}")
-print(f"\033[01m\033[31m_________________________________________________\033[0m\n")
-# Assuming SEA_trends DataFrame is defined as in your provided code.
-SEA_trends_chronic_VNM_1990_2019 = SEA_trends.loc[(SEA_trends['Risk_Factor'] == 'Chronic_Diseases') & (SEA_trends['Code'] == 'VNM') & ((SEA_trends['Year'] == 1990) | (SEA_trends['Year'] == 2019))]
-
-print(f"\033[31m\nSlope of Death causes from chronic disease risk factors in \033[01mVNM\033[0m\n")
-
-# Group by Cause and calculate the slope for each cause
-for cause in SEA_trends_chronic_VNM_1990_2019['Cause'].unique():
-  SEA_trends_cause = SEA_trends_chronic_VNM_1990_2019[SEA_trends_chronic_VNM_1990_2019['Cause'] == cause]
-  if len(SEA_trends_cause) >= 2:  # Ensure we have data for both 1990 and 2019
-    slope = np.polyfit(SEA_trends_cause['Year'], SEA_trends_cause['Death_Population_Ratio'], 1)[0]
-    print(f"{cause}: {slope}")
-print(f"\033[01m\033[31m_________________________________________________\033[0m\n")
-# Assuming SEA_trends DataFrame is defined as in your provided code.
-SEA_trends_chronic_MMR_1990_2019 = SEA_trends.loc[(SEA_trends['Risk_Factor'] == 'Chronic_Diseases') & (SEA_trends['Code'] == 'MMR') & ((SEA_trends['Year'] == 1990) | (SEA_trends['Year'] == 2019))]
-
-print(f"\033[31m\nSlope of Death causes from chronic disease risk factors in \033[01mMMR\033[0m\n")
-
-# Group by Cause and calculate the slope for each cause
-for cause in SEA_trends_chronic_MMR_1990_2019['Cause'].unique():
-  SEA_trends_cause = SEA_trends_chronic_MMR_1990_2019[SEA_trends_chronic_MMR_1990_2019['Cause'] == cause]
-  if len(SEA_trends_cause) >= 2:  # Ensure we have data for both 1990 and 2019
-    slope = np.polyfit(SEA_trends_cause['Year'], SEA_trends_cause['Death_Population_Ratio'], 1)[0]
-    print(f"{cause}: {slope}")
-
-print(f"\033[01m\033[31m_________________________________________________\033[0m\n")
-# Assuming SEA_trends DataFrame is defined as in your provided code.
-SEA_trends_chronic_PHL_1990_2019 = SEA_trends.loc[(SEA_trends['Risk_Factor'] == 'Chronic_Diseases') & (SEA_trends['Code'] == 'PHL') & ((SEA_trends['Year'] == 1990) | (SEA_trends['Year'] == 2019))]
-
-print(f"\033[31m\nSlope of Death causes from chronic disease risk factors in \033[01mPHL\033[0m\n")
-
-# Group by Cause and calculate the slope for each cause
-for cause in SEA_trends_chronic_PHL_1990_2019['Cause'].unique():
-  SEA_trends_cause = SEA_trends_chronic_PHL_1990_2019[SEA_trends_chronic_PHL_1990_2019['Cause'] == cause]
-  if len(SEA_trends_cause) >= 2:  # Ensure we have data for both 1990 and 2019
-    slope = np.polyfit(SEA_trends_cause['Year'], SEA_trends_cause['Death_Population_Ratio'], 1)[0]
-    print(f"{cause}: {slope}")
 ```
 
-    Slope of Death causes from chronic disease risk factors in 
-    
-    Alzheimers_Disease_and_Other_Dementias: 7.52957466903095e-06
-    Parkinsons_Disease: 1.2784433024104426e-06
-    Cardiovascular_Diseases: 1.8348468776633923e-05
-    Lower_Respiratory_Infections: 8.820302113446309e-06
-    Neoplasms: 2.7460643472037347e-05
-    Diabetes_Mellitus: 4.299560800528264e-06
-    Chronic_Kidney_Disease: 7.637487333865589e-06
-    Chronic_Respiratory_Diseases: -5.726559451885765e-07
-    Cirrhosis_and_Other_Chronic_Liver_Diseases: 3.3397965723986366e-06
-    Digestive_Diseases: 5.594504251456752e-06
-    _________________________________________________
-    
-    Slope of Death causes from chronic disease risk factors in 
-    
-    Alzheimers_Disease_and_Other_Dementias: 3.018184508504391e-06
-    Parkinsons_Disease: 6.942554981115699e-07
-    Cardiovascular_Diseases: 2.2859401591431383e-05
-    Lower_Respiratory_Infections: -5.494572704000524e-06
-    Neoplasms: 1.7500770270727564e-05
-    Diabetes_Mellitus: 4.237761624576514e-06
-    Chronic_Kidney_Disease: 2.0871341279444143e-06
-    Chronic_Respiratory_Diseases: -2.7535646667455644e-07
-    Cirrhosis_and_Other_Chronic_Liver_Diseases: -8.147275168030234e-09
-    Digestive_Diseases: -8.935363389923354e-07
-    _________________________________________________
-    
-    Slope of Death causes from chronic disease risk factors in 
-    
-    Alzheimers_Disease_and_Other_Dementias: 2.3321200591861093e-06
-    Parkinsons_Disease: 5.665079753835643e-07
-    Cardiovascular_Diseases: 7.396970873448845e-06
-    Lower_Respiratory_Infections: -3.3262342066137434e-05
-    Neoplasms: 5.5853662486110854e-06
-    Diabetes_Mellitus: 3.3707058464959666e-06
-    Chronic_Kidney_Disease: 1.0017066677426237e-06
-    Chronic_Respiratory_Diseases: -3.7952103738431717e-06
-    Cirrhosis_and_Other_Chronic_Liver_Diseases: 7.721261791166874e-07
-    Digestive_Diseases: -2.7812201203056585e-06
-    _________________________________________________
-    
-    Slope of Death causes from chronic disease risk factors in 
-    
-    Alzheimers_Disease_and_Other_Dementias: 1.0828307596862882e-06
-    Parkinsons_Disease: 2.487891894672568e-07
-    Cardiovascular_Diseases: 3.969672491584766e-05
-    Lower_Respiratory_Infections: -4.7730427682768764e-06
-    Neoplasms: 4.949453870279525e-06
-    Diabetes_Mellitus: 3.1128222468282433e-06
-    Chronic_Kidney_Disease: 4.836855816077512e-06
-    Chronic_Respiratory_Diseases: -5.637386980481894e-07
-    Cirrhosis_and_Other_Chronic_Liver_Diseases: 1.8668743114737612e-07
-    Digestive_Diseases: -1.2735105120173989e-06
+![png](https://github.com/nnut21/Project_Dads5001_Data/blob/main/markdown/Event_Duration_1990-2023_Single.png)
+
+![png](https://github.com/nnut21/Project_Dads5001_Data/blob/main/markdown/Event_Duration_1990-2023_Multi.png)
+
+![png](https://github.com/nnut21/Project_Dads5001_Data/blob/main/markdown/Event_Decrease_1990_2023.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
